@@ -11,8 +11,8 @@
         <img src="assets/Logo (1).png" alt="Logo" class="logo">
     </header>
     <main class="contenido">
-        <section class="texto_aqui">
-            <p>Ingrese el texto aqui</p>
+        <section class="texto_aqui" id="texto_aqui">
+            <textarea placeholder="Ingrese el texto aqui" class="container_input" type="text" id="ingresarTexto" maxlength="300"></textarea>
         </section>
         <section class="apartado_admiracion">
             <div class="admiracion">
@@ -21,17 +21,18 @@
             </div>
         </section>
         <div class="botones">
-            <a class="boton_encriptar">Encriptar</a>
-            <a class="boton_desencriptar">Desencriptar</a>
+            <a class="boton_encriptar" id="encriptar" onclick="procesarTexto()">Encriptar</a>
+            <a class="boton_desencriptar" id="desencriptar" onclick="reversoTexto()">Desencriptar</a>
         </div>
     </main>
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
         <section class="resultado">
-                <img class="imagen" src="assets/Muñeco.png" alt="Buscando" >
-            <h2 class="subtitulo">Ningún mensaje fue encontrado</h2>
-            <p class="parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>  
-            <!-- <a class="boton_copiar">Copiar</a> -->
+                <img class="imagen" src="assets/Muñeco.png" alt="Buscando" id="imagen">
+            <h2 class="subtitulo" id="subtitulo">Ningún mensaje fue encontrado</h2>
+            <p class="parrafo" id="texto">Ingresa el texto que desees encriptar o desencriptar.</p>  
+            <a class="boton_copiar" id="boton_copiar" style="display: none;">Copiar</a>
         </section>
     </aside>
+    <script src="app.js" defer></script>
 </body>
 </html>

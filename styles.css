@@ -19,21 +19,39 @@
 }
 
 .contenido{
-    padding: 5.25rem 5rem 0 15rem;
+    padding: 5.25rem 5rem 4.5rem 15rem;
     display: flex;
     flex-direction: column;
-
 }
 .texto_aqui{
+    width:  42.5rem ;
+    height: 39rem;
+    padding-bottom: 3rem;
+}
+#texto_aqui textarea{
+    white-space: normal;
+    overflow-wrap: break-word;
+    resize: none;
+    overflow: hidden;
+}
+.container_input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
     font-family: "Inter", sans-serif;
     font-size: 2rem;
     font-weight: 400;
     color: var(--color-texto-primario);
-    width: 36rem;
+}
+.container_input::placeholder{
+    color: var(--color-texto-primario);
 }
 .resultado{
     right: 2rem;
     left: 2rem;
+    width: 25rem;
 }
 .imagen{
     max-width: 100%;
@@ -80,7 +98,7 @@ body{
     padding-bottom: 1rem;
 }
 .admiracion{
-    padding-top: 40rem;
+    /* padding-top: 40rem; */
     display: flex;
     flex-direction: row;
     gap: 8px;
@@ -101,6 +119,7 @@ body{
     flex-direction: row;
     align-items: center;
     gap: 24px;
+    width: 42.5rem;
 }
 .boton_encriptar{
     font-family: 'inter', sans-serif;
@@ -128,7 +147,7 @@ body{
     border:1px solid var(--color-texto-primario);
 }
 
-@media(max-width:1444px){
+@media(max-width:1439px){
     .imagen{
         display: none;
     }
@@ -146,6 +165,11 @@ body{
         justify-content: center;
         top: 62rem;
         padding-top: 2rem;
+        margin-left: 2.5rem;
+        margin-top: 1rem;
+    }
+    .resultado{
+        width: 100%;
     }
     .parrafo{
         padding-bottom: 2rem;
@@ -168,16 +192,19 @@ body{
         display: none;
     }
     .sidebar{
-        bottom: auto;
+        /* bottom: auto; */
         width: 688px;
         position: static;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 133px;
-        padding: 2rem 0 2rem;
+        padding: 0 0;
         border-radius: 2rem;
-        margin: 2.5rem 2.5rem 2.5rem 2.5rem;
+        margin: 1rem 2.5rem 2.5rem 2.5rem;
+    }
+    .resultado{
+        width: 100%;
     }
     .subtitulo{
         width: 624px;
@@ -187,7 +214,7 @@ body{
     .parrafo{
         width: 624px;
         text-align: center;
-        padding: 2rem 2rem 1rem 2rem;
+        padding: 0 2rem 2rem 2rem;
     }
     .contenido{
         padding: 5.25rem 2.5rem 2.5rem 2.5rem;
@@ -226,6 +253,9 @@ body{
         margin-right: 1.25rem;
         margin-bottom: 2.5rem;
         box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
+    }
+    .resultado{
+        width: 100%;
     }
     .subtitulo{
         width: 263px;
@@ -268,4 +298,34 @@ body{
         padding-top: 1.25rem;
     }
     
+}
+.textoResultado{
+    font-family: 'inter',sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 21rem;
+    height: 49rem;
+    padding: 0%;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    color: var(--color-texto-terciario);
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+.boton_copiar{
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    padding: 1.5rem 1.5rem;
+    border: var(--color-texto-primario) solid 1px;
+    border-radius: 1.5rem;
+    background-color: transparent;
+    font-size: 1rem;
+    font-family: 'inter',sans-serif;
+    font-weight: 400;
+    color: var(--color-texto-primario);
+    margin: 2rem 2rem;
+    text-align: center;
+    bottom: 2rem;
 }
