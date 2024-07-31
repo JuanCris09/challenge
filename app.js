@@ -12,9 +12,10 @@ function elemento() {
     botonCopiar.style.display = "block";
 
     texto.classList.add("textoResultado");
-    aside.style.height = "59rem";
-    aside.style.justifyContent = "flex-start";
-    aside.style.width = "25rem";
+    aside.classList.add("modificado");
+    // aside.style.height = "59rem";
+    // aside.style.justifyContent = "flex-start";
+    // aside.style.width = "25rem";
   }
 }
 
