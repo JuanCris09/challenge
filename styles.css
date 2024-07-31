@@ -167,6 +167,7 @@ body {
     text-align: center;
     border: 1px solid var(--color-texto-primario);
 }
+
 .textoResultado {
     font-family: 'inter', sans-serif;
     font-size: 1.5rem;
@@ -198,11 +199,32 @@ body {
     text-align: center;
     bottom: 2rem;
 }
+/* Animacion */
+  @keyframes latidos {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .latidos {
+    animation: latidos 0.8s ease-in-out 5; /* Animación infinita */
+    color: #FFFF00; /* Color del texto */
+    transition: transform 0.8s ease-in-out;
+  }
+
+
 @media(max-width:1439px) {
     .imagen {
         display: none;
     }
-    #texto.parrafo.textoResultado{
+
+    #texto.parrafo.textoResultado {
         height: auto;
     }
 }
@@ -224,21 +246,25 @@ body {
         margin-left: 2.5rem;
         margin-top: 1rem;
     }
-    #sidebar.modificado{
+
+    #sidebar.modificado {
         width: auto;
         margin-right: 2rem;
         justify-content: center;
         align-items: center;
         padding-top: 0%;
     }
-    #boton_copiar.boton_copiar{
+
+    #boton_copiar.boton_copiar {
         align-content: center;
         width: auto;
     }
-    #texto.parrafo{
+
+    #texto.parrafo {
         width: 92%;
         text-align: justify;
     }
+
     .resultado {
         width: 100%;
     }
@@ -280,20 +306,23 @@ body {
         border-radius: 2rem;
         margin: 1rem 2.5rem 2.5rem 2.5rem;
     }
-    #sidebar.modificado{
+
+    #sidebar.modificado {
         width: 43rem;
         height: auto;
     }
-    #texto.parrafo.textoResultado{
+
+    #texto.parrafo.textoResultado {
         text-align: justify;
         height: auto;
         padding-top: 2rem;
     }
-    
-    #boton_copiar{
+
+    #boton_copiar {
         width: 84%;
         margin: 2rem 2rem 2rem 2rem;
     }
+
     .resultado {
         width: 43rem;
         height: auto;
@@ -335,14 +364,15 @@ body {
         padding-top: 73px;
         padding-left: 0%;
     }
-    
-     
+
+
 }
 
 @media(max-width: 376px) {
     .imagen {
         display: none;
     }
+
     .sidebar {
         display: flex;
         position: static;
@@ -356,7 +386,8 @@ body {
         margin-bottom: 2.5rem;
         box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
     }
-    #sidebar.modificado{
+
+    #sidebar.modificado {
         width: 21.4375rem;
         height: auto;
         margin-bottom: 1.5rem;
@@ -377,15 +408,18 @@ body {
         text-align: center;
         font-size: 1.5rem;
     }
-    #boton_copiar{
+
+    #boton_copiar {
         width: auto;
         margin-top: 0%;
 
     }
-    #texto.parrafo.textoResultado{
+
+    #texto.parrafo.textoResultado {
         margin-bottom: 0;
         width: 17.4375rem;
     }
+
     .botones {
         display: flex;
         flex-direction: column;

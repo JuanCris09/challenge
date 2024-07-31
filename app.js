@@ -23,6 +23,32 @@ function cambioTexto(texto) {
   const text = document.getElementById("texto");
   text.textContent = texto;
 }
+
+
+function verificarTexto(palabra) {
+  const mayusTildes = /[A-ZÁÉÍÓÚáéíóú]/;
+  const mensajeAdvertencia = document.getElementById("mensajeAdvertencia");
+
+  if (!mensajeAdvertencia) {
+    console.error("No se encontró el elemento con id 'mensajeAdvertencia'.");
+    return true;
+  }
+
+  if (mayusTildes.test(palabra)) {
+    // alert("El texto contiene mayúsculas o acentos, lo cual no es válido.");
+    mensajeAdvertencia.classList.add("latidos");
+    mensajeAdvertencia.style.color = "FFFF00";
+    return false;
+  }else{
+    mensajeAdvertencia.classList.remove("brillo");
+    mensajeAdvertencia.classList.remove("latidos");
+    mensajeAdvertencia.style.color = '#E2E2B6';
+    return true;
+  }
+
+  
+}
+
 //encriptar
   const resultados = {
     a: "ai",
@@ -31,7 +57,11 @@ function cambioTexto(texto) {
     o: "ober",
     u: "ufat",
   };
+
 function encriptado(palabra) {
+  if (!verificarTexto(palabra)) {
+    return "";
+  }
   palabra = String(palabra);
 
   let resultadosPalabra = "";
@@ -56,6 +86,9 @@ const reverso = {
   ufat: "u"
 };
 function desencriptar(palabra) {
+  if (!verificarTexto(palabra)) {
+    return "";
+  }
   let resultado = String(palabra);
 
   for (let clave in reverso){
