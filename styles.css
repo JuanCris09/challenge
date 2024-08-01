@@ -404,11 +404,12 @@ body {
     }
     #texto.parrafo{
         text-align: center;
+        width: auto;
     }
     .parrafo {
         width: 263px;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     #boton_copiar {
@@ -420,6 +421,7 @@ body {
     #texto.parrafo.textoResultado {
         margin-bottom: 0;
         width: 17.4375rem;
+        text-align: justify;
     }
 
     .botones {
