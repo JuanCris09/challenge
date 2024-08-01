@@ -13,9 +13,6 @@ function elemento() {
 
     texto.classList.add("textoResultado");
     aside.classList.add("modificado");
-    // aside.style.height = "59rem";
-    // aside.style.justifyContent = "flex-start";
-    // aside.style.width = "25rem";
   }
 }
 
@@ -26,7 +23,7 @@ function cambioTexto(texto) {
 
 
 function verificarTexto(palabra) {
-  const mayusTildes = /[A-ZÁÉÍÓÚáéíóú]/;
+  const mayusTildes = /[A-ZÁÉÍÓÚáéíóú!@#$%^&*(),.?":{}|<>]/;
   const mensajeAdvertencia = document.getElementById("mensajeAdvertencia");
 
   if (!mensajeAdvertencia) {
@@ -37,12 +34,11 @@ function verificarTexto(palabra) {
   if (mayusTildes.test(palabra)) {
     // alert("El texto contiene mayúsculas o acentos, lo cual no es válido.");
     mensajeAdvertencia.classList.add("latidos");
-    mensajeAdvertencia.style.color = "FFFF00";
     return false;
   }else{
-    mensajeAdvertencia.classList.remove("brillo");
     mensajeAdvertencia.classList.remove("latidos");
     mensajeAdvertencia.style.color = '#E2E2B6';
+    elemento();
     return true;
   }
 }
@@ -107,14 +103,11 @@ function procesarTexto() {
   document.getElementById("texto").innerText = final;
   console.log(textoEntrada);
   console.log(final);
-  elemento();
+  // elemento();
   cambioTexto(final);
   document.getElementById("ingresarTexto").value = "";
 }
-// document.getElementById("encriptar").addEventListener("click", function () {
-//   elemento();
-//   cambioTexto(final);
-// });
+
 
 function reversoTexto(){
   let textoEntrada = String(document.getElementById("ingresarTexto").value);
@@ -122,14 +115,11 @@ function reversoTexto(){
   document.getElementById("texto").innerText = final;
   console.log(textoEntrada);
   console.log(final);
-  elemento();
+  // elemento();
   cambioTexto(final);
   document.getElementById("ingresarTexto").value = "";
 }
-// document.getElementById("desencriptar").addEventListener("click", function () {
-//   elemento();
-//   cambioTexto(final);
-// });
+
 //Seleccionar el texto y copiar el texto con la funcion updateClipboard
 document.getElementById('boton_copiar').addEventListener('click', function(){
   const textoCopiado = document.getElementById('texto').innerText;

@@ -213,8 +213,8 @@ body {
   }
   
   .latidos {
-    animation: latidos 0.8s ease-in-out 5; /* Animación infinita */
-    color: #FFFF00; /* Color del texto */
+    animation: latidos 0.8s ease-in-out 5;
+    color: #FFFF00;
     transition: transform 0.8s ease-in-out;
   }
 
