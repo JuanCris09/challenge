@@ -261,8 +261,8 @@ body {
     }
 
     #texto.parrafo {
-        width: 92%;
-        text-align: justify;
+        width: auto;
+        text-align: center;
     }
 
     .resultado {
@@ -402,7 +402,9 @@ body {
         text-align: center;
         padding: 2rem 2rem 1rem 2rem;
     }
-
+    #texto.parrafo{
+        text-align: center;
+    }
     .parrafo {
         width: 263px;
         text-align: center;

@@ -45,8 +45,6 @@ function verificarTexto(palabra) {
     mensajeAdvertencia.style.color = '#E2E2B6';
     return true;
   }
-
-  
 }
 
 //encriptar
