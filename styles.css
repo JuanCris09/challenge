@@ -260,9 +260,9 @@ body {
         width: auto;
     }
 
-    #texto.parrafo {
+    #texto.parrafo.textoResultado {
         width: auto;
-        text-align: center;
+        text-align: justify;
     }
 
     .resultado {
